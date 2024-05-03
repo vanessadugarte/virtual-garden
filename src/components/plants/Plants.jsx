@@ -5,7 +5,6 @@ const PlantsPage = () => {
     return (
         <Container maxWidth="sm" sx={{textAlign:"center"}}>
             <Typography variant="h2">Plants page</Typography>
-            <Product/>
             <h2>oglggllf</h2>
         </Container>
     );

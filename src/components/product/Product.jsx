@@ -5,7 +5,7 @@ import imgBugambilia from "../../assets/img-bugambilia.jpg"
 const Product = () => {
     return (
 
-            <Card sx={{maxWidth: 345, boxShadow:6}}>
+            <Card sx={{maxWidth: 375, boxShadow:6}}>
                 <CardMedia
                     sx={{height: 190}}
                     image={imgBugambilia}
@@ -20,12 +20,28 @@ const Product = () => {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button variant="contained">-</Button>
-                    <Button variant="contained">3</Button>
-                    <Button variant="contained">+</Button>
+                    <Button
+                        variant="contained"
+                        sx={{backgroundColor: "#88D3B8", '&:hover': {backgroundColor: "#4FA888",}}}
+                    >
+                        -
+                    </Button>
+
+
+                    <Button variant="contained" sx={{backgroundColor: "#88D3B8", '&:hover': {backgroundColor: "#4FA888",}}}
+                    >
+                        3
+                    </Button>
+
+
+                    <Button variant="contained" sx={{backgroundColor: "#88D3B8", '&:hover': {backgroundColor: "#4FA888",}}}
+                    >
+                        +
+                    </Button>
+
                 </CardActions>
                 <CardActions>
-                    <Button sx={{width:"100%"}} variant="contained">Añadir al carrito</Button>
+                    <Button sx={{width:"100%", backgroundColor:"#88D3B8"}} variant="contained">Añadir al carrito</Button>
                 </CardActions>
             </Card>
 

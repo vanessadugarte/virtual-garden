@@ -16,6 +16,7 @@ import PropTypes from "prop-types";
 import MenuIcon from '@mui/icons-material/Menu';
 import {HiShoppingCart} from "react-icons/hi";
 import logo from "../../../assets/logo-jardinvirtual.png"
+import {NavLink} from "react-router-dom";
 
 const drawerWidth = 240;
 const Navbar = ({window, handleCartView}) => {
@@ -33,14 +34,14 @@ const Navbar = ({window, handleCartView}) => {
             <Divider/>
             <List>
                 <ListItem disablePadding>
-                    <ListItemButton href="/home" sx={{textAlign: 'center'}}>
-                        <ListItemText primary="Inicio"/>
-                    </ListItemButton>
+                    <NavLink to="/">
+                        Inicio
+                    </NavLink>
                 </ListItem>
                 <ListItem disablePadding>
-                    <ListItemButton href="/plants" sx={{textAlign: 'center'}}>
-                        <ListItemText primary="Plantas"/>
-                    </ListItemButton>
+                    <NavLink to="plantas">
+                        Plantas
+                    </NavLink>
                 </ListItem>
                 <ListItem disablePadding>
                     <ListItemButton href="/about" sx={{textAlign: 'center'}}>
@@ -86,12 +87,12 @@ const Navbar = ({window, handleCartView}) => {
 
                     </Typography>
                     <Box sx={{display: {xs: 'none', sm: 'block'}}}>
-                        <Button href="/home" sx={{color: '#fff', fontSize: '1.2rem', mr: 2}}>
+                        <NavLink to="/">
                             Inicio
-                        </Button>
-                        <Button href="/plants" sx={{color: '#fff', fontSize: '1.2rem', mr: 2}}>
+                        </NavLink>
+                        <NavLink to="plantas">
                             Plantas
-                        </Button>
+                        </NavLink>
                         <Button href="/about" sx={{color: '#fff', fontSize: '1.2rem', mr: 2}}>
                             Nosotros
                         </Button>
