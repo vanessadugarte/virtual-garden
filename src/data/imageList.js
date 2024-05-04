@@ -1,38 +1,46 @@
+import imgFlower from "../assets/imageList/flower-circle.jpg"
+import jungleAtHome from "../assets/imageList/jungle-at-home.jpg"
+import succulents from "../assets/imageList/succulents.jpg"
+import orejaOso from "../assets/imageList/oreja-oso.jpg"
+import mushroom from "../assets/imageList/red-mushroom.jpg"
+import gomero from "../assets/imageList/gomero.jpg"
+
+
 export const imageList = [
     {
-        img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-        title: 'Breakfast',
+        img: imgFlower,
+        title: 'Flower Circle',
         rows: 3,
         cols: 2,
     },
 
     {
-        img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-        title: 'Camera',
+        img: gomero,
+        title: 'pink flower',
         cols:4,
         rows:2,
     },
 
 
     {
-        img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-        title: 'Honey',
+        img: jungleAtHome,
+        title: 'jungle at home',
         rows: 4,
         cols: 2,
     },
     {
-        img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-        title: 'Basketball',
+        img: orejaOso,
+        title: 'bear plant',
         rows:4,
         cols:2,
     },
     {
-        img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
+        img: succulents,
         title: 'Fern',
         cols: 2,
     },
     {
-        img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
+        img: mushroom,
         title: 'Mushrooms',
         rows: 2,
         cols: 2,

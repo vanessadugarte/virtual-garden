@@ -41,9 +41,14 @@ const Navbar = ({window, handleCartView}) => {
                     </NavLink>
                 </ListItem>
                 <ListItem disablePadding>
-                    <ListItemButton href="/about" sx={{textAlign: 'center'}}>
-                        <ListItemText primary="Nosotros"/>
-                    </ListItemButton>
+                    <NavLink to="maceteros">
+                        Maceteros
+                    </NavLink>
+                </ListItem>
+                <ListItem disablePadding>
+                    <NavLink to="nosotros">
+                        Nosotros
+                    </NavLink>
                 </ListItem>
                 <Divider/>
             </List>
