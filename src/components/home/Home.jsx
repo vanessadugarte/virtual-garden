@@ -3,6 +3,7 @@ import slide from "../../assets/slide-plantas-desk.jpg"
 import Product from "../common/product/Product";
 import {imageList} from "../../data/imageList";
 import "./home.css"
+import Footer from "../common/footer/Footer";
 
 function srcset(image, size, rows = 1, cols = 1) {
     return {
@@ -68,6 +69,7 @@ const HomePage = () => {
                         ))}
                     </ImageList>
                 </Grid>
+                <Footer/>
             </Grid>
 
 
