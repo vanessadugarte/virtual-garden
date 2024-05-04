@@ -1,6 +1,6 @@
 import {Box, Button, Grid, ImageList, ImageListItem, Paper, Typography} from "@mui/material";
 import slide from "../../assets/slide-plantas-desk.jpg"
-import Product from "../product/Product";
+import Product from "../common/product/Product";
 import {imageList} from "../../data/imageList";
 import "./home.css"
 

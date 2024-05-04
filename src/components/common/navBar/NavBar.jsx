@@ -46,8 +46,8 @@ const Navbar = ({window, handleCartView}) => {
                     </NavLink>
                 </ListItem>
                 <ListItem disablePadding>
-                    <NavLink to="nosotros">
-                        Nosotros
+                    <NavLink to="contacto">
+                        Contacto
                     </NavLink>
                 </ListItem>
                 <Divider/>
@@ -94,6 +94,9 @@ const Navbar = ({window, handleCartView}) => {
                         </NavLink>
                         <NavLink to="plantas">
                             Plantas
+                        </NavLink>
+                        <NavLink to="maceteros">
+                            Maceteros
                         </NavLink>
                         <NavLink to="contacto">
                             Contacto
