@@ -41,7 +41,7 @@ const Product = () => {
 
                 </CardActions>
                 <CardActions>
-                    <Button sx={{width:"100%", backgroundColor:"#88D3B8"}} variant="contained">Añadir al carrito</Button>
+                    <Button sx={{width:"100%", backgroundColor:"#88D3B8", '&:hover': {backgroundColor: "#4FA888"}}} variant="contained">Añadir al carrito</Button>
                 </CardActions>
             </Card>
 

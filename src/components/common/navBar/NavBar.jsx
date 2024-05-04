@@ -17,6 +17,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import {HiShoppingCart} from "react-icons/hi";
 import logo from "../../../assets/logo-jardinvirtual.png"
 import {NavLink} from "react-router-dom";
+import "./navbar.css"
 
 const drawerWidth = 240;
 const Navbar = ({window, handleCartView}) => {
@@ -28,11 +29,7 @@ const Navbar = ({window, handleCartView}) => {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{textAlign: 'center'}}>
-            <Typography variant="h6" sx={{my: 2}}>
-                Jardín Virtual
-            </Typography>
-            <Divider/>
-            <List>
+            <List className="list">
                 <ListItem disablePadding>
                     <NavLink to="/">
                         Inicio
@@ -93,9 +90,9 @@ const Navbar = ({window, handleCartView}) => {
                         <NavLink to="plantas">
                             Plantas
                         </NavLink>
-                        <Button href="/about" sx={{color: '#fff', fontSize: '1.2rem', mr: 2}}>
-                            Nosotros
-                        </Button>
+                        <NavLink to="contacto">
+                            Contacto
+                        </NavLink>
                         <IconButton size="large" aria-label="show 4 new mails" sx={{color: "white"}} onClick={()=>handleCartView}>
                             <Badge badgeContent={cartQuantity} color="error">
                                 <HiShoppingCart/>
