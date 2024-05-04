@@ -20,7 +20,7 @@ export const plantas = [
             " plantas tienen un formato más arbustivo que las bugambilias tradicionales. Florece en primavera y puede" +
             " extenderse hasta el otoño.",
         category: "exterior",
-        imageUrl: imgBugambilia
+        image: imgBugambilia
     },
     {
         id: 2,
@@ -28,7 +28,7 @@ export const plantas = [
         price: 6990,
         description: "Es una planta de interior popular por su follaje exuberante y verde brillante. Originaria de América del Sur, esta planta tropical es apreciada por su fácil cuidado y capacidad para purificar el aire.",
         category: "interior",
-        imageUrl: imgParaguayo
+        image: imgParaguayo
     },
     {
         id: 3,
@@ -36,7 +36,7 @@ export const plantas = [
         price: 5500,
         description: "También llamada Costilla de Adán, es una planta tropical conocida por sus grandes hojas perforadas y su fácil cuidado. Es una opción popular para decorar interiores gracias a su exuberante follaje",
         category: "interior",
-        imageUrl: imgMonstera
+        image: imgMonstera
     },
     {
         id: 4,
@@ -44,7 +44,7 @@ export const plantas = [
         price: 8000,
         description: "conocida como la 'Planta de la Suerte', es una planta de interior de bajo mantenimiento, perfecta para agregar elegancia a cualquier espacio. Sus hojas vibrantes y variadas son una delicia visual.",
         category: "outdoor",
-        imageUrl: imgAglaonema
+        image: imgAglaonema
     },
     {
         id: 5,
@@ -52,7 +52,7 @@ export const plantas = [
         price: 9000,
         description: "La Cala burdeo es una variante vibrante y llamativa, añade un toque de elegancia y color a cualquier espacio. Perfecta para interiores iluminados y protegidos del sol directo. ¡Embellece tu hogar con su belleza única!",
         category: "interior",
-        imageUrl: imgCala
+        image: imgCala
     },
     {
         id: 6,
@@ -60,7 +60,7 @@ export const plantas = [
         price: 6500,
         description: "El boj es un arbusto muy lindo por su tono verde intenso, es de crecimiento lento y permite una poda ornamental muy variada. Puedes usarlo como más te guste, dándole forma cónica, esférica o dejarlo de manera natural.",
         category: "exterior",
-        imageUrl: imgBoj
+        image: imgBoj
     },
     {
         id: 7,
@@ -68,7 +68,7 @@ export const plantas = [
         price: 9500,
         description: "Indoor palm that purifies the air.",
         category: "interior",
-        imageUrl: imgFicus
+        image: imgFicus
     },
     {
         id: 8,
@@ -76,7 +76,7 @@ export const plantas = [
         price: 7000,
         description: "también conocido como \"Ficus Hoja de Violín\", es una planta de interior con hojas grandes y brillantes que añaden un toque tropical a cualquier espacio. Requiere luz indirecta y riego moderado",
         category: "interior",
-        imageUrl: imgLyrata
+        image: imgLyrata
     },
     {
         id: 9,
@@ -84,7 +84,7 @@ export const plantas = [
         price: 7500,
         description: "La planta Pink Princess, conocida por sus hojas moteadas de rosa y verde, es una adición llamativa a cualquier hogar. Requiere luz brillante indirecta y humedad moderada para un crecimiento óptimo.",
         category: "interior",
-        imageUrl: imgPinkPrincess
+        image: imgPinkPrincess
     },
     {
         id: 10,
@@ -92,6 +92,6 @@ export const plantas = [
         price: 8500,
         description: "también conocida como Cactus Rosario o Cactus Cinta, es una suculenta de aspecto único con tallos colgantes que producen perlas verdes. Requiere poca agua y luz indirecta, ideal para decorar espacios interiores con su belleza natural",
         category: "interior",
-        imageUrl: imgRosario
+        image: imgRosario
     }
 ];

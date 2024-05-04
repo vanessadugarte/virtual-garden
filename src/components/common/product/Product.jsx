@@ -6,10 +6,10 @@ import imgBugambilia from "../../../assets/img-bugambilia.jpg"
 const Product = ({product}) => {
     return (
 
-            <Card sx={{maxWidth: 375, boxShadow:6}}>
+            <Card sx={{minWidth: 325, boxShadow:2}}>
                 <CardMedia
-                    sx={{height: 190}}
-                    image={imgBugambilia}
+                    sx={{height: 270}}
+                    image={product?.image}
                     title={product?.name}
                 />
                 <CardContent>

@@ -67,13 +67,7 @@ const HomePage = () => {
                             </ImageListItem>
                         ))}
                     </ImageList>
-
                 </Grid>
-
-                <Grid item>
-                    <Product/>
-                </Grid>
-
             </Grid>
 
 
