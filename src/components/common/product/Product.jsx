@@ -1,9 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Button, Card, CardActions, CardContent, CardMedia, Grid, Paper, Typography} from "@mui/material";
-import imgBugambilia from "../../../assets/img-bugambilia.jpg"
+const Product = ({product,handleIncrement}) => {
 
-
-const Product = ({product}) => {
     return (
 
             <Card sx={{minWidth: 325, boxShadow:2}}>
@@ -25,6 +23,7 @@ const Product = ({product}) => {
                         <Button fullWidth
                             variant="contained"
                             sx={{backgroundColor: "#88D3B8", '&:hover': {backgroundColor: "#4FA888"}}}
+
                         >
                             -
                         </Button>
@@ -34,12 +33,12 @@ const Product = ({product}) => {
                     <Grid item xs={4}>
                     <Button fullWidth variant="contained" sx={{backgroundColor: "#88D3B8", '&:hover': {backgroundColor: "#4FA888",}}}
                     >
-                        3
+                        {product.stock}
                     </Button>
                     </Grid>
 
                     <Grid item xs={4} >
-                    <Button fullWidth variant="contained" sx={{backgroundColor: "#88D3B8", '&:hover': {backgroundColor: "#4FA888",}}}
+                    <Button fullWidth onClick={ () => handleIncrement(product)} variant="contained" sx={{backgroundColor: "#88D3B8", '&:hover': {backgroundColor: "#4FA888",}}}
                     >
                         +
                     </Button>

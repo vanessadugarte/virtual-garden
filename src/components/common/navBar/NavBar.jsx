@@ -18,6 +18,7 @@ import {HiShoppingCart} from "react-icons/hi";
 import logo from "../../../assets/logo-jardinvirtual.png"
 import {NavLink} from "react-router-dom";
 import "./navbar.css"
+import CartWidget from "../../cart/CartWidget";
 
 const drawerWidth = 240;
 const Navbar = ({window, handleCartView}) => {
@@ -130,7 +131,6 @@ const Navbar = ({window, handleCartView}) => {
             <Box component="main" sx={{p: 3}}>
                 <Toolbar/>
             </Box>
-
         </Box>
     );
 };
