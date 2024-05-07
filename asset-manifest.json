@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/virtual-garden/static/css/main.3ac6a05f.css",
+    "main.js": "/virtual-garden/static/js/main.9e4b5c80.js",
+    "static/media/oreja-oso.jpg": "/virtual-garden/static/media/oreja-oso.5cd3b7a4b4360e4d31b1.jpg",
+    "static/media/red-mushroom.jpg": "/virtual-garden/static/media/red-mushroom.ce1d75649625e8fff554.jpg",
+    "static/media/mapa-PedroValdivia.jpg": "/virtual-garden/static/media/mapa-PedroValdivia.b7105f3c43b59b6783c9.jpg",
+    "static/media/flower-circle.jpg": "/virtual-garden/static/media/flower-circle.bdecd037e290c03d5e2b.jpg",
+    "static/media/slide-plantas-desk.jpg": "/virtual-garden/static/media/slide-plantas-desk.8cacd194d1b9016b4460.jpg",
+    "static/media/gomero.jpg": "/virtual-garden/static/media/gomero.c52c69f6ceb1bfbdba2b.jpg",
+    "static/media/jungle-at-home.jpg": "/virtual-garden/static/media/jungle-at-home.90696077a9862288dd0a.jpg",
+    "static/media/succulents.jpg": "/virtual-garden/static/media/succulents.3aad0fc4fc2dc590cda5.jpg",
+    "static/media/img-bugambilia.jpg": "/virtual-garden/static/media/img-bugambilia.3cdb8b609ba9320e1bf7.jpg",
+    "static/media/macetero-arcilla.jpg": "/virtual-garden/static/media/macetero-arcilla.e83a9594ac6b66a90485.jpg",
+    "static/media/macetero-plastico.jpg": "/virtual-garden/static/media/macetero-plastico.044bb83b16b77c11021c.jpg",
+    "static/media/img-lyrata.jpg": "/virtual-garden/static/media/img-lyrata.a73fe75c83f3307be76f.jpg",
+    "static/media/macetero-cemento.jpg": "/virtual-garden/static/media/macetero-cemento.d8c330b423d5d6cea2e8.jpg",
+    "static/media/img-aglaonema.jpg": "/virtual-garden/static/media/img-aglaonema.6762d232b17a7bb057cd.jpg",
+    "static/media/img-pink-princess.jpg": "/virtual-garden/static/media/img-pink-princess.219742e8b16738ac863a.jpg",
+    "static/media/img-paraguayo.jpg": "/virtual-garden/static/media/img-paraguayo.3ca956fec3e227dcc384.jpg",
+    "static/media/macetero-nordico.jpg": "/virtual-garden/static/media/macetero-nordico.08a8bb770ef6258e3a90.jpg",
+    "static/media/img-ficus.jpg": "/virtual-garden/static/media/img-ficus.ca4ec272473145c50750.jpg",
+    "static/media/macetero-mimbre.jpg": "/virtual-garden/static/media/macetero-mimbre.e21cd145c5156d5e0e15.jpg",
+    "static/media/img-monstera.jpg": "/virtual-garden/static/media/img-monstera.1dde7d36fdf7dc1b0e81.jpg",
+    "static/media/img-cala.jpg": "/virtual-garden/static/media/img-cala.ec2199020c31cb03fb8b.jpg",
+    "static/media/macetero-sueco.jpg": "/virtual-garden/static/media/macetero-sueco.346338d812408e0ce0d9.jpg",
+    "static/media/macetero-pack.jpg": "/virtual-garden/static/media/macetero-pack.1ccab705f5ca405ab65d.jpg",
+    "static/media/img-boj.jpg": "/virtual-garden/static/media/img-boj.68d105fe74f1ad93c354.jpg",
+    "static/media/img-rosario.jpg": "/virtual-garden/static/media/img-rosario.df4e5929396912babb61.jpg",
+    "static/media/macetero-metalico.jpg": "/virtual-garden/static/media/macetero-metalico.070782387be1f2fa413b.jpg",
+    "static/media/macetero-autoregante.jpg": "/virtual-garden/static/media/macetero-autoregante.3128c953ed2e92ab0162.jpg",
+    "static/media/macetero-rectangular.jpg": "/virtual-garden/static/media/macetero-rectangular.0ab96eacd9436d66454d.jpg",
+    "index.html": "/virtual-garden/index.html",
+    "main.3ac6a05f.css.map": "/virtual-garden/static/css/main.3ac6a05f.css.map",
+    "main.9e4b5c80.js.map": "/virtual-garden/static/js/main.9e4b5c80.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ac6a05f.css",
+    "static/js/main.9e4b5c80.js"
+  ]
+}
