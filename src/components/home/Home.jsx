@@ -24,7 +24,7 @@ const HomePage = () => {
                           backgroundImage: `url(${slide})`,
                           backgroundSize: 'cover',
                           backgroundPosition: 'center',
-                          width: '100%',
+                          width: '100vw',
                           height: '550px',
                       }}
                   >
@@ -35,7 +35,7 @@ const HomePage = () => {
                     <Typography variant="h2"
                                 sx={{mt: 2, color: "#88D3B8", fontSize: { xs: '40px', sm: '50px', textAlign:"center" },}}
                     >
-                        Nuestras Plantas
+                        Jardín Virtual
                     </Typography>
                 </Grid>
 
@@ -53,13 +53,13 @@ const HomePage = () => {
                 <Grid item sx={{display:"flex", flexDirection:"row", justifyContent:"center", marginTop:"60px", color:"gray"}}>
                     <ImageList
                         xs={6}
-                        sx={{width:{ xs: '500px', sm: '1300px' }, height: { xs: '450px', sm: '750px' }, marginRight:"40px",}}
+                        sx={{width:{ xs: '350px', sm: '500px', md:"1270px" }, height: { xs: '750px', sm: '650px', md:"750px" }, marginRight:"20px", marginLeft:"20px"}}
                         variant="quilted"
                         cols={6}
                         rowHeight={121}
                     >
                         {imageList.map((item) => (
-                            <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+                            <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1} sx={{ "&:hover img": { filter: "grayscale(100%)", transition: "all 0.3s ease" } }}>
                                 <img
                                     {...srcset(item.img, 121, item.rows, item.cols)}
                                     alt={item.title}

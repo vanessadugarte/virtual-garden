@@ -7,14 +7,14 @@ const Product = ({product}) => {
 
     return (
 
-            <Card sx={{minWidth: 325, boxShadow:2}}>
+            <Card sx={{minWidth: 315, boxShadow:2}}>
                 <CardMedia
                     sx={{height: 270}}
                     image={product?.image}
                     title={product?.name}
                 />
                 <CardContent>
-                    <Typography gutterBottom component="div" sx={{color: "#88D3B8", fontSize:"28px"}}>
+                    <Typography gutterBottom component="div" sx={{color: "#88D3B8", fontSize:"26px"}}>
                         {product?.name}
                     </Typography>
                     <Typography gutterBottom sx={{mt:2, fontSize:"24px"}}>
