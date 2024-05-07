@@ -22,7 +22,7 @@ export const plantas = [
         category: "exterior",
         image: imgBugambilia,
         type: "planta",
-        stock:7
+        stock:4
     },
     {
         id: 2,
@@ -32,7 +32,7 @@ export const plantas = [
         category: "interior",
         image: imgParaguayo,
         type: "planta",
-        stock:10
+        stock:6
     },
     {
         id: 3,
@@ -42,7 +42,7 @@ export const plantas = [
         category: "interior",
         image: imgMonstera,
         type: "planta",
-        stock:15
+        stock:5
     },
     {
         id: 4,
@@ -52,7 +52,7 @@ export const plantas = [
         category: "outdoor",
         image: imgAglaonema,
         type: "planta",
-        stock:9
+        stock:3
     },
     {
         id: 5,
@@ -62,7 +62,7 @@ export const plantas = [
         category: "interior",
         image: imgCala,
         type: "planta",
-        stock:8
+        stock:2
     },
     {
         id: 6,
@@ -93,7 +93,7 @@ export const plantas = [
         category: "interior",
         image: imgLyrata,
         type: "planta",
-        stock:11
+        stock:5
     },
     {
         id: 9,
@@ -113,6 +113,6 @@ export const plantas = [
         category: "interior",
         image: imgRosario,
         type: "planta",
-        stock:6
+        stock:3
     }
 ];

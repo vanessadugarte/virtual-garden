@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import {Button, Card, CardActions, CardContent, CardMedia, Grid, Paper, Typography} from "@mui/material";
-const Product = ({product,handleIncrement}) => {
+import ItemCount from "./ItemCount";
+import useCount from "../../hooks/useCount";
+const Product = ({product}) => {
+    const {count, decrement, increment} = useCount();
 
     return (
 
@@ -19,31 +22,7 @@ const Product = ({product,handleIncrement}) => {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Grid item xs={4}>
-                        <Button fullWidth
-                            variant="contained"
-                            sx={{backgroundColor: "#88D3B8", '&:hover': {backgroundColor: "#4FA888"}}}
-
-                        >
-                            -
-                        </Button>
-                    </Grid>
-
-
-                    <Grid item xs={4}>
-                    <Button fullWidth variant="contained" sx={{backgroundColor: "#88D3B8", '&:hover': {backgroundColor: "#4FA888",}}}
-                    >
-                        {product.stock}
-                    </Button>
-                    </Grid>
-
-                    <Grid item xs={4} >
-                    <Button fullWidth onClick={ () => handleIncrement(product)} variant="contained" sx={{backgroundColor: "#88D3B8", '&:hover': {backgroundColor: "#4FA888",}}}
-                    >
-                        +
-                    </Button>
-                    </Grid>
-
+                   <ItemCount count={count} increment={increment} stock={product.stock} decrement={decrement}/>
                 </CardActions>
                 <CardActions>
                     <Button sx={{width:"100%", backgroundColor:"#88D3B8", '&:hover': {backgroundColor: "#4FA888"}}} variant="contained">Añadir al carrito</Button>
@@ -54,3 +33,4 @@ const Product = ({product,handleIncrement}) => {
 };
 
 export default Product;
+

@@ -40,7 +40,7 @@ export const maceteros = [
         image: maceteroArcilla,
         type:"macetero"
         ,
-        stock:7
+        stock:3
     },
     {
         id: 4,
@@ -50,7 +50,7 @@ export const maceteros = [
         category: "pequeño",
         image: maceteroCemento,
         type:"macetero",
-        stock:8
+        stock:2
     },
     {
         id: 5,
@@ -70,7 +70,7 @@ export const maceteros = [
         category: "pequeño",
         image: maceteroMetalico,
         type:"macetero",
-        stock:10
+        stock:5
     },
     {
         id: 7,
@@ -80,7 +80,7 @@ export const maceteros = [
         category: "pequeño",
         image: maceteroPack,
         type:"macetero",
-        stock:12
+        stock:4
     },
     {
         id: 8,
@@ -90,7 +90,7 @@ export const maceteros = [
         category: "pequeño",
         image: maceteroPlastico,
         type:"macetero",
-        stock:9
+        stock:5
     },
     {
         id: 9,
@@ -100,7 +100,7 @@ export const maceteros = [
         category: "pequeño",
         image: maceteroMimbre,
         type:"macetero",
-        stock:7
+        stock:3
     },
     {
         id: 10,
@@ -111,6 +111,6 @@ export const maceteros = [
         category: "pequeño",
         image: maceteroRectangular,
         type:"macetero",
-        stock:9
+        stock:3
     },
 ];
