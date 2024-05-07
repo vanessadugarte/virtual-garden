@@ -69,7 +69,6 @@ const HomePage = () => {
                         ))}
                     </ImageList>
                 </Grid>
-                <Footer/>
             </Grid>
 
 
