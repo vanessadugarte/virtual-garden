@@ -73,7 +73,9 @@ const Navbar = ({window, handleCartView}) => {
                     >
                         <MenuIcon/>
                     </IconButton>
-                    <img src={logo} alt="Logo"/>
+                    <NavLink to="/">
+                        <img src={logo} alt="Logo"/>
+                    </NavLink>
                     <Box sx={{mr: 2, display: {sm: 'none'}}}>
                         <IconButton size="large" aria-label="show 4 new mails" onClick={()=>handleCartView}>
                             <Badge badgeContent={cartQuantity} color="error">
