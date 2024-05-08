@@ -4,6 +4,7 @@ import Product from "../common/product/Product";
 import {imageList} from "../../data/imageList";
 import "./home.css"
 import Footer from "../common/footer/Footer";
+import ProductDetail from "../common/productDetail/ProductDetail";
 
 function srcset(image, size, rows = 1, cols = 1) {
     return {
