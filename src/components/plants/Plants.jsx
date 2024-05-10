@@ -3,11 +3,22 @@ import {plantas} from "../../data/plants";
 import Product from "../common/product/Product";
 import {useEffect, useState} from "react";
 import useCount from "../hooks/useCount";
+import {getPlantList} from "../../services/trefleService";
 
 
 const PlantsPage = () => {
     const [plantsList, setPlantsList] = useState([]);
     const [openBackdrop, setOpenBackdrop] = useState(true);
+
+    const fetchData = async () => {
+        try {
+            await getPlantList.then( (plantList) => {
+                console.log("trefle: " ,plantList)
+            })
+        }catch(error){
+
+        }
+    }
     const handleCloseBackdrop = () => {
         setOpenBackdrop(false);
     };
@@ -19,16 +30,18 @@ const PlantsPage = () => {
         return new Promise((resolve) => {
             setTimeout(() => {
                 resolve(plantas);
-            }, 1000);
+            }, 800);
         });
     };
 
     useEffect(() => {
+        fetchData().then(r => r);
+
         fakeFetch().then( (plantList) => {
             setPlantsList(plantList)
             handleCloseBackdrop();
         })
-    }, [fakeFetch]);
+    }, []);
 
     return (
         <Container maxWidth="xl" sx={{textAlign: "center", display:"flex", flexDirection:"column", alignItems:"center", paddingBottom:"65px"}}>

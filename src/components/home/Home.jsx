@@ -5,6 +5,8 @@ import {imageList} from "../../data/imageList";
 import "./home.css"
 import Footer from "../common/footer/Footer";
 import ProductDetail from "../common/productDetail/ProductDetail";
+import {getPlantList} from "../../services/trefleService";
+import {useEffect} from "react";
 
 function srcset(image, size, rows = 1, cols = 1) {
     return {
@@ -16,6 +18,21 @@ function srcset(image, size, rows = 1, cols = 1) {
 }
 
 const HomePage = () => {
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+    const fetchData = async () => {
+        try {
+            await getPlantList.then( (plantList) => {
+                console.log("trefle: " ,plantList)
+            })
+        }catch(error){
+
+        }
+    }
+
+
     return (
         <>
             <Grid container sx={{display:"flex", flexDirection:"column", alignContent:"center", width: '100%'}}>
@@ -70,7 +87,6 @@ const HomePage = () => {
                         ))}
                     </ImageList>
                 </Grid>
-                <ProductDetail/>
             </Grid>
 
 
