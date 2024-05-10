@@ -70,6 +70,7 @@ const HomePage = () => {
                         ))}
                     </ImageList>
                 </Grid>
+                <ProductDetail/>
             </Grid>
 
 
