@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Card, CardMedia, Grid, Typography} from "@mui/material";
+import {Box, CardMedia, Grid, Typography} from "@mui/material";
 import imgMapa from "../../assets/mapa-PedroValdivia.jpg"
 
 const Contacto = () => {

@@ -8,12 +8,27 @@ import {getPlantList} from "../../services/trefleService";
 
 const PlantsPage = () => {
     const [plantsList, setPlantsList] = useState([]);
-    const [openBackdrop, setOpenBackdrop] = useState(true);
+    const [openBackdrop, setOpenBackdrop] = useState(false);
+
+    useEffect(() => {
+        console.log("mis plantas", plantsList)
+    }, [plantsList]);
+
+    useEffect(() => {
+        fetchData().then(r => r);
+
+        /*fakeFetch().then( (plantList) => {
+            setPlantsList(plantList)
+            handleCloseBackdrop();
+        })*/
+    }, []);
 
     const fetchData = async () => {
+        setOpenBackdrop(true)
         try {
-            await getPlantList.then( (plantList) => {
-                console.log("trefle: " ,plantList)
+            await getPlantList().then( (list) => {
+                setPlantsList(list.data)
+                setOpenBackdrop(false)
             })
         }catch(error){
 
@@ -34,14 +49,7 @@ const PlantsPage = () => {
         });
     };
 
-    useEffect(() => {
-        fetchData().then(r => r);
 
-        fakeFetch().then( (plantList) => {
-            setPlantsList(plantList)
-            handleCloseBackdrop();
-        })
-    }, []);
 
     return (
         <Container maxWidth="xl" sx={{textAlign: "center", display:"flex", flexDirection:"column", alignItems:"center", paddingBottom:"65px"}}>

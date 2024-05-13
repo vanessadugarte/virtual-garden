@@ -3,10 +3,8 @@ import slide from "../../assets/slide-plantas-desk.jpg"
 import Product from "../common/product/Product";
 import {imageList} from "../../data/imageList";
 import "./home.css"
-import Footer from "../common/footer/Footer";
-import ProductDetail from "../common/productDetail/ProductDetail";
 import {getPlantList} from "../../services/trefleService";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 function srcset(image, size, rows = 1, cols = 1) {
     return {
@@ -17,15 +15,21 @@ function srcset(image, size, rows = 1, cols = 1) {
     };
 }
 
-const HomePage = () => {
+const Home = () => {
+    const [data, setData] = useState({});
 
     useEffect(() => {
-        fetchData();
+        fetchData().then(r => console.log("r", r));
     }, []);
+
+    useEffect(() => {
+        console.log("data", data)
+    }, [data]);
     const fetchData = async () => {
         try {
             await getPlantList.then( (plantList) => {
                 console.log("trefle: " ,plantList)
+                setData(plantList);
             })
         }catch(error){
 
@@ -94,4 +98,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage;
+export default Home;

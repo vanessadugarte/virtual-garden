@@ -1,9 +1,9 @@
 import React from 'react';
 import {Route, Routes} from "react-router-dom";
 import Home from "../components/home/Home";
-import Plants from "../components/plants/Plants";
 import FlowerPots from "../components/flowerPots/FlowerPots";
 import Contacto from "../components/contacto/Contacto";
+import Plants from "../components/plants/Plants";
 
 const Router = () => {
     return (
