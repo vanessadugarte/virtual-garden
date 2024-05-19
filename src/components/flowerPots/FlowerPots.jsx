@@ -3,12 +3,38 @@ import {Backdrop, CircularProgress, Container, Grid, Typography} from "@mui/mate
 import {plantas} from "../../data/plants";
 import Product from "../common/product/Product";
 import {maceteros} from "../../data/flowerPots";
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
 const FlowerPots = () => {
 
 
     const [potsList, setPotsList] = useState([]);
     const [openBackdrop, setOpenBackdrop] = useState(true);
+
+
+    useEffect(() => {
+        setOpenBackdrop(true)
+        const db = getFirestore();
+        const dataList = collection(db, "maceteros");
+        getDocs(dataList).then((data) => {
+            setPotsList(data.docs.map( (doc) => doc.data()))
+        } )
+            .finally( () =>  setOpenBackdrop(false))
+
+        console.log("mis maceteros", potsList)
+    }, []);
+
+
+    useEffect(() => {
+        console.log(potsList)
+        //fetchData().then(r => r);
+
+        /*fakeFetch().then( (plantList) => {
+            setPlantsList(plantList)
+            handleCloseBackdrop();
+        })*/
+    }, [potsList]);
+
     const handleCloseBackdrop = () => {
         setOpenBackdrop(false);
     };
@@ -24,12 +50,12 @@ const FlowerPots = () => {
         });
     };
 
-    useEffect(() => {
+ /*   useEffect(() => {
         fakeFetch().then( (potList) => {
             setPotsList(potList)
             handleCloseBackdrop();
         })
-    }, [fakeFetch]);
+    }, [fakeFetch]);*/
 
     return (
         <Container maxWidth="xl" sx={{textAlign: "center", display:"flex", flexDirection:"column", alignItems:"center", paddingBottom:"65px"}}>
