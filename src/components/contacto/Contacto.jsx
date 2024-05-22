@@ -12,7 +12,7 @@ const Contacto = () => {
            </Grid>
            <Grid item sx={{display:"flex", justifyContent:"center"}}>
                <Typography sx={{color:"gray", maxWidth:{xs:"70%", md:"50%"}, textAlign:"center", fontSize:"18px", marginBottom:"30px"}}>
-                   ¿Buscas nuestra ubicación? ¡Estás en el lugar correcto, nos encantaría conocerte en persona!
+                   ¿Buscas nuestra ubicación?¡Estás en el lugar correcto, nos encantaría conocerte en persona!
                    Si tienes alguna pregunta o necesitas ayuda adicional, no dudes en ponerte en contacto con nosotros a través del número +56 95645 3568. Estamos aquí para ayudarte en cada paso del camino.
                </Typography>
            </Grid>
