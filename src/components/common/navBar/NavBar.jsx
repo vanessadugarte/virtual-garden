@@ -18,10 +18,9 @@ import {HiShoppingCart} from "react-icons/hi";
 import logo from "../../../assets/logo-jardinvirtual.png"
 import {NavLink} from "react-router-dom";
 import "./navbar.css"
-import CartWidget from "../../cart/CartWidget";
 
 const drawerWidth = 240;
-const Navbar = ({window, handleCartView}) => {
+const Navbar = ({window, stateDrawer, setStateDrawer}) => {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [cartQuantity, setCartQuantity] = useState(3)
     const handleDrawerToggle = () => {
@@ -32,22 +31,22 @@ const Navbar = ({window, handleCartView}) => {
         <Box onClick={handleDrawerToggle} sx={{textAlign: 'center'}}>
             <List className="list">
                 <ListItem disablePadding>
-                    <NavLink to="/">
+                    <NavLink to="/" className="mobLink">
                         Inicio
                     </NavLink>
                 </ListItem>
                 <ListItem disablePadding>
-                    <NavLink to="plantas">
+                    <NavLink to="plantas" className="mobLink">
                         Plantas
                     </NavLink>
                 </ListItem>
                 <ListItem disablePadding>
-                    <NavLink to="maceteros">
+                    <NavLink to="maceteros" className="mobLink">
                         Maceteros
                     </NavLink>
                 </ListItem>
                 <ListItem disablePadding>
-                    <NavLink to="contacto">
+                    <NavLink to="contacto" className="mobLink">
                         Contacto
                     </NavLink>
                 </ListItem>
@@ -77,7 +76,7 @@ const Navbar = ({window, handleCartView}) => {
                         <img src={logo} alt="Logo"/>
                     </NavLink>
                     <Box sx={{mr: 2, display: {sm: 'none'}}}>
-                        <IconButton size="large" aria-label="show 4 new mails" onClick={()=>handleCartView}>
+                        <IconButton size="large" aria-label="show 4 new mails" onClick={()=>setStateDrawer(!stateDrawer)}>
                             <Badge badgeContent={cartQuantity} color="error">
                                 <HiShoppingCart/>
                             </Badge>
@@ -104,7 +103,7 @@ const Navbar = ({window, handleCartView}) => {
                         <NavLink to="contacto">
                             Contacto
                         </NavLink>
-                        <IconButton size="large" aria-label="show 4 new mails" sx={{color: "white"}} onClick={()=>handleCartView}>
+                        <IconButton size="large" aria-label="show 4 new mails" sx={{color: "white"}} onClick={()=>setStateDrawer(!stateDrawer)}>
                             <Badge badgeContent={cartQuantity} color="error">
                                 <HiShoppingCart/>
                             </Badge>

@@ -5,6 +5,7 @@ import {imageList} from "../../data/imageList";
 import "./home.css"
 import {getPlantList} from "../../services/trefleService";
 import {useEffect, useState} from "react";
+import ProductDetail from "../common/productDetail/ProductDetail";
 
 function srcset(image, size, rows = 1, cols = 1) {
     return {
@@ -47,7 +48,7 @@ const Home = () => {
                           backgroundSize: 'cover',
                           backgroundPosition: 'center',
                           width: '100vw',
-                          height: '550px',
+                          height: '480px',
                       }}
                   >
                   </Box>

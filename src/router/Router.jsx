@@ -9,6 +9,9 @@ const Router = () => {
     return (
         <Routes>
             <Route path="/" element={<Home/>}/>
+            <Route path="home" element={<Home/>}/>
+            <Route path="virtual-garden" element={<Home/>}/>
+            <Route path="virtual-garden-app" element={<Home/>}/>
             <Route path="plantas" element={<Plants/>}/>
             <Route path="maceteros" element={<FlowerPots/>}/>
             <Route path="contacto" element={<Contacto/>}/>

@@ -5,6 +5,7 @@ import App from './App';
 import {BrowserRouter} from "react-router-dom";
 import Router from "./router/Router";
 import { initializeApp } from "firebase/app";
+import {ContextProvider} from "./context/ContextProvider";
 
 const firebaseConfig = {
     apiKey: "AIzaSyC4Hvd8_OxFR-DNcrHKX5whVbiCKzC1jOc",
@@ -22,9 +23,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter basename="/">
-        <App>
-            <Router/>
-        </App>
+        <ContextProvider>
+            <App>
+                <Router/>
+            </App>
+        </ContextProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

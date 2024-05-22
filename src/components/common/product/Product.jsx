@@ -1,9 +1,20 @@
-import React, {useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Button, Card, CardActions, CardContent, CardMedia, Grid, Paper, Typography} from "@mui/material";
 import ItemCount from "./ItemCount";
 import useCount from "../../hooks/useCount";
+import {AppContext} from "../../../context/ContextProvider";
 const Product = ({product}) => {
     const {count, decrement, increment} = useCount();
+    const {updateCartItems, state, addItemToCart} = useContext(AppContext)
+
+    useEffect(() => {
+
+    }, [count]);
+    const handleAddToCart = () => {
+        const sendToCart = {...product, quantity:count}
+
+        addItemToCart(sendToCart);
+    }
 
     return (
 
@@ -25,7 +36,7 @@ const Product = ({product}) => {
                    <ItemCount count={count} increment={increment} stock={product?.stock} decrement={decrement}/>
                 </CardActions>
                 <CardActions>
-                    <Button sx={{width:"100%", backgroundColor:"#88D3B8", '&:hover': {backgroundColor: "#4FA888"}}} variant="contained">Añadir al carrito</Button>
+                    <Button sx={{width:"100%", backgroundColor:"#88D3B8", '&:hover': {backgroundColor: "#4FA888"}}} variant="contained" onClick={handleAddToCart}>Añadir al carrito</Button>
                 </CardActions>
             </Card>
 

@@ -1,6 +1,12 @@
 a {
     text-decoration: none;
-    color:#FFF;
+    color:white;
     margin-right: 45px;
     font-size:22px;
+}
+
+.mobLink{
+    color:#88D3B8;
+    font-size:16px;
+    line-height: 2.7;
 }
