@@ -11,11 +11,27 @@ const Product = ({product}) => {
 
     }, [count]);
     const handleAddToCart = () => {
-        if(count <1) {return}
-        const sendToCart = {...product, quantity:count}
+        let newList = [];
+        if(count > 0) {
+            let mainKey = `${product.id}-${product.type}`;
+            let uniqueKeys = new Set(state.cartItems.map(obj => `${obj.id}-${obj.type}`));
 
-        addItemToCart(sendToCart);
+            const sendToCart = {...product, quantity: count}
+            if (!uniqueKeys.has(mainKey)) {
+                addItemToCart(sendToCart);
+            } else{
+                const updateQuantity  = state.cartItems.map((el) => {
+                    if (el.id === product.id && el.type === product.type) {
+                        return { ...el, quantity: count };
+                    }else{
+                      return el;
+                    }
+                })
+                updateCartItems(updateQuantity)
+            }
+        }
     }
+
 
     return (
 
