@@ -11,6 +11,7 @@ const Product = ({product}) => {
 
     }, [count]);
     const handleAddToCart = () => {
+        if(count <1) {return}
         const sendToCart = {...product, quantity:count}
 
         addItemToCart(sendToCart);
