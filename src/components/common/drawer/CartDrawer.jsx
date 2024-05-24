@@ -1,13 +1,13 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {
     Avatar,
-    Box,
+    Box, Button,
     Divider,
     Drawer, IconButton,
     List,
     ListItem, ListItemAvatar,
     ListItemButton,
-    ListItemText
+    ListItemText, Typography
 } from "@mui/material";
 import {AppContext} from "../../../context/ContextProvider";
 import {MdDelete} from "react-icons/md";
@@ -17,13 +17,20 @@ const CartDrawer = ({setStateDrawer, stateDrawer}) => {
 
     const [listItems, setListItems] = useState([]);
     const {state, updateCartItems} = useContext(AppContext);
+    const [total, setTotal] = useState(0);
 
     useEffect(() => {
+        let acumulado = 0;
+        state.cartItems.map((item)=>{
+            let pricePerQuantity = item.quantity * item.price
+            acumulado = acumulado + pricePerQuantity
+        })
+        setTotal(acumulado)
         setListItems(state.cartItems)
     }, [stateDrawer, listItems]);
 
     useEffect(()=>{
-    },[listItems]);
+    },[listItems, total]);
     const handleCloseDrawer = () => {
         setStateDrawer(!stateDrawer);
     }
@@ -38,6 +45,11 @@ const CartDrawer = ({setStateDrawer, stateDrawer}) => {
         console.log("nueva lista",removingItem )
         setListItems(removingItem)
         updateCartItems(removingItem)
+    }
+
+    const clearCart = () => {
+        updateCartItems([]);
+        setListItems([]);
     }
 
 
@@ -63,6 +75,16 @@ const CartDrawer = ({setStateDrawer, stateDrawer}) => {
                         </ListItemButton>
                     </ListItem>
                 ))}
+                <ListItem>
+                    <Typography>Total a pagar:</Typography>
+                    <Typography sx={{color:"#4FA888", marginLeft:"3px"}}>{total}</Typography>
+                </ListItem>
+                <ListItem>
+                    <Button fullWidth sx={{backgroundColor:"#88D3B8", '&:hover': {backgroundColor: "#4FA888"}}} variant="contained">PAGAR</Button>
+                </ListItem>
+                <ListItem>
+                    <Button fullWidth sx={{backgroundColor:"#88D3B8", '&:hover': {backgroundColor: "#4FA888"}}} variant="contained" onClick={clearCart}>VACIAR CARRITO</Button>
+                </ListItem>
             </List>
         </Box>
     );
