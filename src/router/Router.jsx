@@ -14,7 +14,8 @@ const Router = () => {
             <Route path="virtual-garden" element={<Home/>}/>
             <Route path="virtual-garden-app" element={<Home/>}/>
             <Route path="plantas" element={<Plants/>}/>
-            <Route path="plantas/:idPlanta" element={<ProductDetail/>}/>
+            <Route path="plantas/:id/:type" element={<ProductDetail />}/>
+            <Route path="maceteros/:id/:type" element={<ProductDetail />}/>
             <Route path="maceteros" element={<FlowerPots/>}/>
             <Route path="contacto" element={<Contacto/>}/>
 

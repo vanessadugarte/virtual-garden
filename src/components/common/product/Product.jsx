@@ -7,6 +7,11 @@ import {NavLink} from "react-router-dom";
 const Product = ({product}) => {
     const {count, decrement, increment} = useCount();
     const {updateCartItems, state, addItemToCart} = useContext(AppContext)
+    const [url, setUrl] = useState("");
+
+    useEffect(() => {
+        setUrl(`${product.id}/${product.type}`)
+    }, [product]);
 
     useEffect(() => {
 
@@ -37,15 +42,16 @@ const Product = ({product}) => {
     return (
 
             <Card sx={{maxWidth: 315, minWidth: 315, boxShadow:2}}>
-                <NavLink to={`${product.id}`}>
+                <NavLink to={url}>
                     <CardMedia
                         sx={{height: 270}}
                         image={product?.image}
                         title={product?.name}
+                        onClick={()=>console.log("log", product)}
                     />
                 </NavLink>
                 <CardContent>
-                    <NavLink to={`${product.id}`}>
+                    <NavLink to={url}>
                         <Typography gutterBottom component="div" sx={{color: "#88D3B8", fontSize:"26px"}}>
                             {product?.name}
                         </Typography>
