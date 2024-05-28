@@ -6,6 +6,7 @@ import "./home.css"
 import {getPlantList} from "../../services/trefleService";
 import {useEffect, useState} from "react";
 import ProductDetail from "../common/productDetail/ProductDetail";
+import PaymentSummary from "../paymentSummary/PaymentSummary";
 
 function srcset(image, size, rows = 1, cols = 1) {
     return {
@@ -92,6 +93,7 @@ const Home = () => {
                         ))}
                     </ImageList>
                 </Grid>
+                <PaymentSummary/>
             </Grid>
 
 
