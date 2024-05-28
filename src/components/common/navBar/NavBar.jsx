@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import {
     AppBar, Badge,
     Box,
@@ -18,11 +18,21 @@ import {HiShoppingCart} from "react-icons/hi";
 import logo from "../../../assets/logo-jardinvirtual.png"
 import {NavLink} from "react-router-dom";
 import "./navbar.css"
+import {AppContext} from "../../../context/ContextProvider";
 
 const drawerWidth = 240;
 const Navbar = ({window, stateDrawer, setStateDrawer}) => {
     const [mobileOpen, setMobileOpen] = useState(false);
-    const [cartQuantity, setCartQuantity] = useState(3)
+    const [cartQuantity, setCartQuantity] = useState(0);
+    const {state} = useContext(AppContext)
+
+    useEffect(() => {
+        let adding = 0;
+        state.cartItems.map((item)=>{
+          adding = adding + item.quantity
+       });
+        setCartQuantity(adding)
+    }, [state]);
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };

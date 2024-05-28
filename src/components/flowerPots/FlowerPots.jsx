@@ -17,7 +17,7 @@ const FlowerPots = () => {
         const db = getFirestore();
         const dataList = collection(db, "maceteros");
         getDocs(dataList).then((data) => {
-            setPotsList(data.docs.map( (doc) => doc.data()))
+            setPotsList(data.docs.map( (doc) => ({...doc.data(), id:doc.id})))
         } )
             .finally( () =>  setOpenBackdrop(false))
 

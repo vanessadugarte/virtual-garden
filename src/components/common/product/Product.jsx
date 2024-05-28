@@ -1,11 +1,17 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {Button, Card, CardActions, CardContent, CardMedia, Grid, Paper, Typography} from "@mui/material";
+import {Button, Card, CardActions, CardContent, CardMedia, Grid, Link, Paper, Typography} from "@mui/material";
 import ItemCount from "./ItemCount";
 import useCount from "../../hooks/useCount";
 import {AppContext} from "../../../context/ContextProvider";
+import {NavLink} from "react-router-dom";
 const Product = ({product}) => {
     const {count, decrement, increment} = useCount();
     const {updateCartItems, state, addItemToCart} = useContext(AppContext)
+    const [url, setUrl] = useState("");
+
+    useEffect(() => {
+        setUrl(`${product.id}/${product.type}`)
+    }, [product]);
 
     useEffect(() => {
 
@@ -36,15 +42,20 @@ const Product = ({product}) => {
     return (
 
             <Card sx={{maxWidth: 315, minWidth: 315, boxShadow:2}}>
-                <CardMedia
-                    sx={{height: 270}}
-                    image={product?.image}
-                    title={product?.name}
-                />
+                <NavLink to={url}>
+                    <CardMedia
+                        sx={{height: 270}}
+                        image={product?.image}
+                        title={product?.name}
+                        onClick={()=>console.log("log", product)}
+                    />
+                </NavLink>
                 <CardContent>
-                    <Typography gutterBottom component="div" sx={{color: "#88D3B8", fontSize:"26px"}}>
-                        {product?.name}
-                    </Typography>
+                    <NavLink to={url}>
+                        <Typography gutterBottom component="div" sx={{color: "#88D3B8", fontSize:"26px"}}>
+                            {product?.name}
+                        </Typography>
+                    </NavLink>
                     <Typography gutterBottom sx={{mt:2, fontSize:"24px"}}>
                         {product?.price}
                     </Typography>
