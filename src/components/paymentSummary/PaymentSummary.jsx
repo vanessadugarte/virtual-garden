@@ -8,17 +8,15 @@ const PaymentSummary = () => {
     const {state} = useContext(AppContext);
     const [total, setTotal] = useState(0);
 
-    useEffect(() => {
-        console.log(listItems)
-    }, [listItems]);
+
 
     useEffect(() => {
         let acumulado = 0;
-        state.cartItems.map((item)=>{
-            let pricePerQuantity = item.quantity * item.price
-            acumulado = acumulado + pricePerQuantity
+        state.cartItems.map((product)=>{
+            let price = product.quantity*product.price;
+            acumulado = acumulado + price
         })
-        setTotal(acumulado)
+        setTotal(acumulado);
         setListItems(state.cartItems)
     }, [listItems]);
 
