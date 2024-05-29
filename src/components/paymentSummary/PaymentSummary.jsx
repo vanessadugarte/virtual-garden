@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Grid, Paper, Typography} from "@mui/material";
+import {Avatar, Box, Grid, Paper, Typography} from "@mui/material";
 
 const PaymentSummary = () => {
     return (
@@ -14,18 +14,30 @@ const PaymentSummary = () => {
                 padding: 3,
             }}>
 
-                <Grid container>
+                <Grid container spacing={8}>
+                    <Grid item >
+                        <Typography sx={{fontSize:"25px"}}>Detalle</Typography>
+                    </Grid>
                     <Grid item>
+                        <Typography sx={{fontSize:"25px"}}>Precio</Typography>
+                    </Grid>
+                    <Grid item>
+                        <Typography sx={{fontSize:"25px"}}>Cantidad</Typography>
+                    </Grid>
+                </Grid>
 
+                <Grid container spacing={8} sx={{fontSize:"15px"}}>
+                    <Grid item>
+                        <Avatar sx={{}} alt="Remy Sharp" src="https://mui.com/static/images/avatar/3.jpg" />
                     </Grid>
                     <Grid item>
-                        <Typography sx={{marginRight:"10px"}}>ejemplo1</Typography>
+                        <Typography sx={{fontSize:"20px"}}>Filodendro Paraguayo</Typography>
                     </Grid>
                     <Grid item>
-                        <Typography sx={{marginRight:"10px"}}>ejemplo2</Typography>
+                        <Typography sx={{fontSize:"20px"}}>$7.990</Typography>
                     </Grid>
                     <Grid item>
-                        <Typography sx={{marginRight:"10px"}}>ejemplo3</Typography>
+                        <Typography sx={{fontSize:"20px"}}>3</Typography>
                     </Grid>
                 </Grid>
 
