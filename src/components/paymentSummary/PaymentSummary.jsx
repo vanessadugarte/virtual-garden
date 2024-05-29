@@ -9,11 +9,10 @@ const PaymentSummary = () => {
     const [total, setTotal] = useState(0);
 
 
-
     useEffect(() => {
         let acumulado = 0;
-        state.cartItems.map((product)=>{
-            let price = product.quantity*product.price;
+        state.cartItems.map((product) => {
+            let price = product.quantity * product.price;
             acumulado = acumulado + price
         })
         setTotal(acumulado);
@@ -21,57 +20,52 @@ const PaymentSummary = () => {
     }, [listItems]);
 
     return (
-        <Box
-            sx={{
-                    display: 'flex',
-                    justifyContent: "center",
-                    flexWrap: 'wrap'}}
-        >
-
-            <Paper square={false} elevation={2} sx={{
-                height: 260,
-                padding: 3,
-            }}>
-
-                <Grid container spacing={8}>
-                    <Grid item >
-                        <Typography sx={{fontSize:"25px"}}>Detalle</Typography>
+        <Box sx={{
+            display: 'flex',
+            flexDirection: {
+                xs: 'column',
+                sm: 'row',
+            },
+            justifyContent: "center", flexWrap: 'wrap'
+        }}>
+            <Paper square={false} elevation={2} sx={{padding: 4, width:{ xs:"100%", sm:'40%'}, marginRight: "30px", marginBottom:{ xs:"5%", sm:'0%'}}}>
+                <Grid container spacing={1} alignItems="center" sx={{marginBottom: "20px"}}>
+                    <Grid item sm={1.5}>
                     </Grid>
-                    <Grid item>
-                        <Typography sx={{fontSize:"25px"}}>Precio</Typography>
+                    <Grid item xs={4.5}>
+                        <Typography variant="h5" sx={{color: "#88D3B8"}}>Detalle</Typography>
                     </Grid>
-                    <Grid item>
-                        <Typography sx={{fontSize:"25px"}}>Cantidad</Typography>
+                    <Grid item xs={3}>
+                        <Typography variant="h5" sx={{color: "#88D3B8"}}>Precio</Typography>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Typography variant="h5" sx={{color: "#88D3B8"}}>Cantidad</Typography>
                     </Grid>
                 </Grid>
-                {listItems.map((product)=> (
-                    <Grid container spacing={8} sx={{fontSize:"15px"}}>
-                        <Grid item>
-                            <Avatar sx={{}} alt="Remy Sharp" src={product.image} />
+                {state.cartItems.map((product) => (
+                    <Grid container spacing={1} alignItems="center" key={product.id} sx={{marginBottom: "20px"}}>
+                        <Grid item xs={1.5}>
+                            <Avatar alt={product.name} src={product.image} sx={{width: 55, height: 55}}/>
                         </Grid>
-                        <Grid item>
-                            <Typography sx={{fontSize:"20px"}}>{product.name}</Typography>
+                        <Grid item xs={4.5}>
+                            <Typography variant={"h5"}>{product.name}</Typography>
                         </Grid>
-                        <Grid item>
-                            <Typography sx={{fontSize:"20px"}}>{product.price*product.quantity}</Typography>
+                        <Grid item xs={3}>
+                            <Typography variant={"h5"}>${product.price}</Typography>
                         </Grid>
-                        <Grid item>
-                            <Typography sx={{fontSize:"20px"}}>{product.quantity}</Typography>
+                        <Grid item xs={3}>
+                            <Typography variant={"h5"}>{product.quantity}</Typography>
                         </Grid>
                     </Grid>
-                )
-                )}
-
-
-
+                ))}
             </Paper>
-
-
-            <Paper square={false} elevation={2} sx={{padding: 3,}}>
-                <Typography>{total}</Typography>
+            <Paper square={false} elevation={2} sx={{padding: 3}}
+                   sx={{display: 'flex', flexDirection: "column", padding: "30px"}}>
+                <Typography variant="h5" sx={{color: "#88D3B8", marginBottom: "20px"}}>Resumen de la compra</Typography>
+                <Typography variant={"h5"} sx={{marginBottom: "30px"}}>Descuento: -$0</Typography>
+                <Typography variant={"h5"}>Total: ${total}</Typography>
             </Paper>
         </Box>
-
 
     );
 };

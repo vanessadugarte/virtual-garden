@@ -93,7 +93,6 @@ const Home = () => {
                         ))}
                     </ImageList>
                 </Grid>
-                <PaymentSummary/>
             </Grid>
 
 
