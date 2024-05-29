@@ -1,13 +1,34 @@
-import React from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Avatar, Box, Grid, Paper, Typography} from "@mui/material";
+import {AppContext} from "../../context/ContextProvider";
 
 const PaymentSummary = () => {
+
+    const [listItems, setListItems] = useState([]);
+    const {state} = useContext(AppContext);
+    const [total, setTotal] = useState(0);
+
+    useEffect(() => {
+        console.log(listItems)
+    }, [listItems]);
+
+    useEffect(() => {
+        let acumulado = 0;
+        state.cartItems.map((item)=>{
+            let pricePerQuantity = item.quantity * item.price
+            acumulado = acumulado + pricePerQuantity
+        })
+        setTotal(acumulado)
+        setListItems(state.cartItems)
+    }, [listItems]);
+
     return (
         <Box
             sx={{
                     display: 'flex',
                     justifyContent: "center",
-                    flexWrap: 'wrap'}}>
+                    flexWrap: 'wrap'}}
+        >
 
             <Paper square={false} elevation={2} sx={{
                 height: 260,
@@ -25,28 +46,31 @@ const PaymentSummary = () => {
                         <Typography sx={{fontSize:"25px"}}>Cantidad</Typography>
                     </Grid>
                 </Grid>
+                {listItems.map((product)=> (
+                    <Grid container spacing={8} sx={{fontSize:"15px"}}>
+                        <Grid item>
+                            <Avatar sx={{}} alt="Remy Sharp" src={product.image} />
+                        </Grid>
+                        <Grid item>
+                            <Typography sx={{fontSize:"20px"}}>{product.name}</Typography>
+                        </Grid>
+                        <Grid item>
+                            <Typography sx={{fontSize:"20px"}}>{product.price*product.quantity}</Typography>
+                        </Grid>
+                        <Grid item>
+                            <Typography sx={{fontSize:"20px"}}>{product.quantity}</Typography>
+                        </Grid>
+                    </Grid>
+                )
+                )}
 
-                <Grid container spacing={8} sx={{fontSize:"15px"}}>
-                    <Grid item>
-                        <Avatar sx={{}} alt="Remy Sharp" src="https://mui.com/static/images/avatar/3.jpg" />
-                    </Grid>
-                    <Grid item>
-                        <Typography sx={{fontSize:"20px"}}>Filodendro Paraguayo</Typography>
-                    </Grid>
-                    <Grid item>
-                        <Typography sx={{fontSize:"20px"}}>$7.990</Typography>
-                    </Grid>
-                    <Grid item>
-                        <Typography sx={{fontSize:"20px"}}>3</Typography>
-                    </Grid>
-                </Grid>
 
 
             </Paper>
 
 
             <Paper square={false} elevation={2} sx={{padding: 3,}}>
-                <Typography>hola2</Typography>
+                <Typography>{total}</Typography>
             </Paper>
         </Box>
 

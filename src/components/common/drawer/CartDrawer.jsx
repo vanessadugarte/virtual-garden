@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import {AppContext} from "../../../context/ContextProvider";
 import {MdDelete} from "react-icons/md";
+import {NavLink} from "react-router-dom";
 
 
 const CartDrawer = ({setStateDrawer, stateDrawer}) => {
@@ -80,7 +81,16 @@ const CartDrawer = ({setStateDrawer, stateDrawer}) => {
                     <Typography sx={{color:"#4FA888", marginLeft:"3px"}}>{total}</Typography>
                 </ListItem>
                 <ListItem>
-                    <Button fullWidth sx={{backgroundColor:"#88D3B8", '&:hover': {backgroundColor: "#4FA888"}}} variant="contained">PAGAR</Button>
+                    <NavLink to="resumenPago" sx={{width:"100%"}}>
+                        <Button
+                            fullWidth
+                            sx={{backgroundColor:"#88D3B8", '&:hover': {backgroundColor: "#4FA888"}}}
+                            variant="contained"
+                            onClick={()=> setStateDrawer(!stateDrawer)}
+                        >
+                            PAGAR
+                        </Button>
+                    </NavLink>
                 </ListItem>
                 <ListItem>
                     <Button fullWidth sx={{backgroundColor:"#88D3B8", '&:hover': {backgroundColor: "#4FA888"}}} variant="contained" onClick={clearCart}>VACIAR CARRITO</Button>
