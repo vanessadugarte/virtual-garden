@@ -80,20 +80,19 @@ const CartDrawer = ({setStateDrawer, stateDrawer}) => {
                     <Typography>Total a pagar:</Typography>
                     <Typography sx={{color:"#4FA888", marginLeft:"3px"}}>{total}</Typography>
                 </ListItem>
-                <ListItem>
+                <ListItem sx={{width:"100%"}}>
                     <NavLink to="resumenPago" sx={{width:"100%"}}>
                         <Button
-                            fullWidth
-                            sx={{backgroundColor:"#88D3B8", '&:hover': {backgroundColor: "#4FA888"}}}
+                            sx={{backgroundColor:"#88D3B8", '&:hover': {backgroundColor: "#4FA888"}, width:"100%"}}
                             variant="contained"
                             onClick={()=> setStateDrawer(!stateDrawer)}
                         >
-                            PAGAR
+                            COMPRAR
                         </Button>
                     </NavLink>
                 </ListItem>
-                <ListItem>
-                    <Button fullWidth sx={{backgroundColor:"#88D3B8", '&:hover': {backgroundColor: "#4FA888"}}} variant="contained" onClick={clearCart}>VACIAR CARRITO</Button>
+                <ListItem sx={{ width: "100%" }}>
+                    <Button fullWidth sx={{backgroundColor:"#88D3B8", '&:hover': {backgroundColor: "#4FA888"}, width:"100%"}} variant="contained" onClick={clearCart} >VACIAR CARRITO</Button>
                 </ListItem>
             </List>
         </Box>
