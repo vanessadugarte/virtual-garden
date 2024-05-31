@@ -16,6 +16,7 @@ const style = {
     p: 5,
 };
 const PaymentSummary = () => {
+    const navigate = useNavigate();
     const [listItems, setListItems] = useState([]);
     const [nombre, setNombre] = useState("");
     const [direccion, setDireccion] = useState("");
@@ -45,7 +46,7 @@ const PaymentSummary = () => {
                 handleClose();
                 console.log("datos insertados", data)
             })
-            return redirect("/home")
+            navigate("/home", {replace:true})
         }catch (error) {
             console.log("error", error)
         }
