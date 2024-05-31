@@ -6,6 +6,11 @@ const ContextProvider = ({children}) => {
         cartItems:[]
     });
 
+    const clearCartItems = () => {
+        setState( () => ({
+            cartItems:[]
+        }))
+    }
     const updateCartItems = (cartItems) => {
         setState( (prevState) => ({
             ...prevState,
@@ -21,7 +26,7 @@ const ContextProvider = ({children}) => {
         }))
     }
     return (
-        <AppContext.Provider value={{state, updateCartItems, addItemToCart}}>
+        <AppContext.Provider value={{state, updateCartItems, addItemToCart, clearCartItems}}>
             {children}
         </AppContext.Provider>
     );
