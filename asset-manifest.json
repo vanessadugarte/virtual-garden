@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/virtual-garden/static/css/main.3ac6a05f.css",
-    "main.js": "/virtual-garden/static/js/main.9e4b5c80.js",
+    "main.css": "/virtual-garden/static/css/main.153c69cf.css",
+    "main.js": "/virtual-garden/static/js/main.79ef1fa3.js",
     "static/media/oreja-oso.jpg": "/virtual-garden/static/media/oreja-oso.5cd3b7a4b4360e4d31b1.jpg",
     "static/media/red-mushroom.jpg": "/virtual-garden/static/media/red-mushroom.ce1d75649625e8fff554.jpg",
     "static/media/mapa-PedroValdivia.jpg": "/virtual-garden/static/media/mapa-PedroValdivia.b7105f3c43b59b6783c9.jpg",
@@ -31,11 +31,11 @@
     "static/media/macetero-autoregante.jpg": "/virtual-garden/static/media/macetero-autoregante.3128c953ed2e92ab0162.jpg",
     "static/media/macetero-rectangular.jpg": "/virtual-garden/static/media/macetero-rectangular.0ab96eacd9436d66454d.jpg",
     "index.html": "/virtual-garden/index.html",
-    "main.3ac6a05f.css.map": "/virtual-garden/static/css/main.3ac6a05f.css.map",
-    "main.9e4b5c80.js.map": "/virtual-garden/static/js/main.9e4b5c80.js.map"
+    "main.153c69cf.css.map": "/virtual-garden/static/css/main.153c69cf.css.map",
+    "main.79ef1fa3.js.map": "/virtual-garden/static/js/main.79ef1fa3.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ac6a05f.css",
-    "static/js/main.9e4b5c80.js"
+    "static/css/main.153c69cf.css",
+    "static/js/main.79ef1fa3.js"
   ]
 }
